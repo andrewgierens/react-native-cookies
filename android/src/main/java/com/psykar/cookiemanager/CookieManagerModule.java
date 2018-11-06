@@ -88,13 +88,4 @@ public class CookieManagerModule extends ReactContextBaseJavaModule {
             }
         });
     }
-
-    @ReactMethod
-    public void clearAll(final Promise promise) {
-        this.cookieHandler.clearCookies(new Callback() {
-            public void invoke(Object... args) {
-                promise.resolve(null);
-            }
-        });
-    }
 }
